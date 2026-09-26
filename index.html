@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV. Junio Decoration - Kontraktor, Landscape, Interior & Perdagangan Umum di Cianjur, Jawa Barat.">
+  <title>CV. Junio Decoration | Contractor • Landscape • Interior • General Trading</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#244c3a;
+      --green-2:#3d7256;
+      --sage:#e8f0e9;
+      --cream:#f7f8f4;
+      --text:#17231d;
+      --muted:#66716a;
+      --white:rgba(255,255,255,.78);
+      --line:rgba(36,76,58,.12);
+      --shadow:0 22px 60px rgba(26,55,41,.12);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"DM Sans",sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;width:100%}
+
+    /* Soft botanical background */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      background:
+        linear-gradient(115deg,rgba(255,255,255,.97) 15%,rgba(255,255,255,.80) 48%,rgba(255,255,255,.91) 100%),
+        url("https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=2200&q=85")
+        center/cover no-repeat;
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      width:620px;height:620px;
+      right:-250px;top:180px;
+      border-radius:50%;
+      background:rgba(143,184,154,.20);
+      filter:blur(100px);
+      z-index:-2;
+      pointer-events:none;
+    }
+
+    .container{width:min(1160px,92%);margin:auto}
+
+    /* Header */
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:20;
+      padding:18px 0;
+      background:rgba(255,255,255,.62);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(36,76,58,.08);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.3px}
+    .brand-mark{
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      background:var(--green);color:white;
+      font-family:"Playfair Display",serif;font-size:20px;
+      box-shadow:0 10px 24px rgba(36,76,58,.20);
+    }
+    .brand small{display:block;font-size:10px;color:var(--muted);font-weight:500;letter-spacing:1.6px;text-transform:uppercase}
+    .nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600}
+    .nav-links a{color:#39463f;transition:.25s}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{
+      padding:11px 17px;border-radius:999px;background:var(--green);color:#fff!important;
+      box-shadow:0 10px 25px rgba(36,76,58,.18);
+    }
+    .menu-btn{display:none;border:0;background:transparent;font-size:25px;color:var(--green)}
+
+    /* Hero */
+    .hero{padding:160px 0 90px;min-height:760px;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      padding:8px 13px;border:1px solid var(--line);
+      background:rgba(255,255,255,.62);backdrop-filter:blur(10px);
+      border-radius:999px;color:var(--green);font-size:12px;font-weight:700;
+      letter-spacing:1.3px;text-transform:uppercase;margin-bottom:24px;
+    }
+    .eyebrow span{width:7px;height:7px;border-radius:50%;background:#6ea47e}
+    h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(46px,6vw,78px);
+      line-height:.98;letter-spacing:-2.8px;
+      max-width:720px;margin-bottom:25px;
+    }
+    h1 em{font-style:normal;color:var(--green-2)}
+    .hero-copy{font-size:17px;color:var(--muted);max-width:600px;margin-bottom:34px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:14px 21px;border-radius:999px;font-weight:700;font-size:14px;
+      transition:.25s;cursor:pointer;border:1px solid transparent;
+    }
+    .btn-primary{background:var(--green);color:#fff;box-shadow:0 13px 30px rgba(36,76,58,.20)}
+    .btn-primary:hover{transform:translateY(-2px);background:#193c2c}
+    .btn-light{background:rgba(255,255,255,.70);border-color:var(--line);color:var(--green)}
+    .btn-light:hover{transform:translateY(-2px);background:#fff}
+    .hero-meta{display:flex;gap:28px;margin-top:42px;flex-wrap:wrap}
+    .meta-item strong{display:block;font-size:14px}.meta-item span{font-size:12px;color:var(--muted)}
+
+    .hero-visual{position:relative}
+    .hero-photo{
+      border-radius:38px;overflow:hidden;
+      box-shadow:var(--shadow);
+      border:8px solid rgba(255,255,255,.68);
+      transform:rotate(1.5deg);
+    }
+    .hero-photo img{height:580px;object-fit:cover}
+    .floating-card{
+      position:absolute;left:-35px;bottom:35px;
+      width:235px;padding:20px;border-radius:22px;
+      background:rgba(255,255,255,.82);backdrop-filter:blur(18px);
+      box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.9);
+    }
+    .floating-card .icon{
+      width:38px;height:38px;border-radius:12px;background:var(--sage);
+      display:grid;place-items:center;color:var(--green);margin-bottom:13px
+    }
+    .floating-card strong{font-size:14px;display:block}
+    .floating-card p{font-size:12px;color:var(--muted);margin-top:3px}
+
+    /* Sections */
+    section{padding:95px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}
+    .kicker{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--green-2);font-weight:800;margin-bottom:10px}
+    h2{font-family:"Playfair Display",serif;font-size:clamp(34px,4vw,50px);line-height:1.05;letter-spacing:-1.5px}
+    .section-head p{max-width:430px;color:var(--muted);font-size:14px}
+
+    .services{background:rgba(245,248,244,.66);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .service{
+      padding:28px 24px;border:1px solid var(--line);border-radius:24px;
+      background:rgba(255,255,255,.67);backdrop-filter:blur(10px);
+      transition:.3s;
+    }
+    .service:hover{transform:translateY(-7px);box-shadow:var(--shadow);background:rgba(255,255,255,.9)}
+    .service-num{font-family:"Playfair Display",serif;font-size:19px;color:#91a49a}
+    .service h3{font-size:19px;margin:38px 0 9px}
+    .service p{font-size:13px;color:var(--muted)}
+
+    /* Portfolio */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .project{position:relative;overflow:hidden;border-radius:26px;min-height:320px;box-shadow:0 15px 40px rgba(20,40,29,.10)}
+    .project:nth-child(1){grid-column:span 7}
+    .project:nth-child(2){grid-column:span 5}
+    .project:nth-child(3){grid-column:span 5}
+    .project:nth-child(4){grid-column:span 7}
+    .project img{height:100%;min-height:320px;object-fit:cover;transition:.6s}
+    .project:hover img{transform:scale(1.055)}
+    .project::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 42%,rgba(10,28,18,.74) 100%);
+    }
+    .project-info{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;color:#fff}
+    .project-info span{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:.8}
+    .project-info h3{font-family:"Playfair Display",serif;font-size:26px;margin-top:4px}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+    .about-image{border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}
+    .about-image img{height:500px;object-fit:cover}
+    .about-copy p{color:var(--muted);font-size:15px;margin:20px 0}
+    .check-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:26px}
+    .check{display:flex;gap:9px;align-items:flex-start;font-size:13px}
+    .check b{color:var(--green)}
+
+    /* CTA */
+    .cta{
+      padding:75px 0;
+    }
+    .cta-box{
+      position:relative;overflow:hidden;
+      padding:65px;border-radius:36px;background:var(--green);color:white;
+      box-shadow:0 25px 70px rgba(36,76,58,.22);
+    }
+    .cta-box::after{
+      content:"";position:absolute;width:390px;height:390px;border-radius:50%;
+      right:-110px;top:-160px;background:rgba(255,255,255,.09);
+    }
+    .cta-box h2{max-width:700px}
+    .cta-box p{max-width:620px;color:rgba(255,255,255,.72);margin:18px 0 27px}
+    .cta-box .btn-primary{background:#fff;color:var(--green);box-shadow:none}
+
+    /* Footer */
+    footer{padding:45px 0 30px;border-top:1px solid var(--line);background:rgba(248,250,247,.74)}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+    footer h3{font-family:"Playfair Display",serif;font-size:24px;margin-bottom:10px}
+    footer p,footer a{font-size:13px;color:var(--muted)}
+    footer a:hover{color:var(--green)}
+    .footer-title{font-weight:700;color:var(--text);margin-bottom:10px}
+    .copyright{margin-top:38px;padding-top:18px;border-top:1px solid var(--line);font-size:11px;color:#8a938d}
+
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .menu-btn{display:block}
+      .hero-grid,.about-grid{grid-template-columns:1fr;gap:45px}
+      .hero{padding-top:135px}
+      .hero-photo img{height:470px}
+      .floating-card{left:18px}
+      .service-grid{grid-template-columns:1fr 1fr}
+      .portfolio-grid{grid-template-columns:1fr 1fr}
+      .project,.project:nth-child(n){grid-column:span 1}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:580px){
+      .container{width:min(92%,520px)}
+      section{padding:70px 0}
+      .hero{min-height:auto;padding-bottom:65px}
+      h1{letter-spacing:-1.8px}
+      .hero-photo img{height:400px}
+      .floating-card{position:relative;left:auto;bottom:auto;margin:-45px 15px 0;z-index:3}
+      .service-grid,.portfolio-grid,.check-list,.footer-grid{grid-template-columns:1fr}
+      .project,.project:nth-child(n){grid-column:span 1;min-height:290px}
+      .project img{min-height:290px}
+      .section-head{display:block}
+      .section-head p{margin-top:15px}
+      .cta-box{padding:38px 27px}
+      .hero-meta{gap:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="CV. Junio Decoration">
+        <div class="brand-mark">JD</div>
+        <div>
+          CV. Junio Decoration
+          <small>Contractor • Landscape • Interior</small>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#layanan">Layanan</a>
+        <a href="#portfolio">Portofolio</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak" class="nav-cta">Hubungi Kami</a>
+      </nav>
+      <button class="menu-btn" aria-label="Buka menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span></span> Cianjur • Jawa Barat</div>
+          <h1>Membangun ruang yang <em>hidup</em> dan bermakna.</h1>
+          <p class="hero-copy">
+            CV. Junio Decoration hadir untuk mewujudkan proyek yang fungsional,
+            rapi, dan estetik melalui layanan kontraktor, landscape, interior,
+            serta perdagangan umum.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/6281296913536?text=Halo%20CV.%20Junio%20Decoration%2C%20saya%20ingin%20konsultasi%20proyek." target="_blank" rel="noopener">💬 Konsultasi via WhatsApp</a>
+            <a class="btn btn-light" href="#portfolio">Lihat Portofolio →</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item"><strong>Kontraktor</strong><span>Pembangunan & renovasi</span></div>
+            <div class="meta-item"><strong>Landscape</strong><span>Taman & ruang hijau</span></div>
+            <div class="meta-item"><strong>Interior</strong><span>Ruang yang berkarakter</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=88" alt="Interior rumah modern dengan tanaman">
+          </div>
+          <div class="floating-card">
+            <div class="icon">✦</div>
+            <strong>Detail yang kami utamakan</strong>
+            <p>Konsep, kualitas pekerjaan, hingga hasil akhir yang nyaman dipandang.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="layanan">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Keahlian kami</div>
+            <h2>Satu partner untuk<br>beragam kebutuhan.</h2>
+          </div>
+          <p>Kami menggabungkan fungsi, estetika, dan ketelitian untuk menghadirkan hasil yang sesuai kebutuhan setiap proyek.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service">
+            <div class="service-num">01</div>
+            <h3>Kontraktor</h3>
+            <p>Pembangunan, renovasi, pekerjaan sipil, dan pengerjaan proyek dengan perhatian pada detail.</p>
+          </article>
+          <article class="service">
+            <div class="service-num">02</div>
+            <h3>Landscape</h3>
+            <p>Perencanaan taman, hardscape, softscape, dan ruang hijau yang menyatu dengan bangunan.</p>
+          </article>
+          <article class="service">
+            <div class="service-num">03</div>
+            <h3>Interior</h3>
+            <p>Penataan ruang, finishing, dan elemen interior untuk menciptakan suasana yang nyaman.</p>
+          </article>
+          <article class="service">
+            <div class="service-num">04</div>
+            <h3>Perdagangan Umum</h3>
+            <p>Penyediaan berbagai kebutuhan barang dan material untuk mendukung kebutuhan proyek.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Selected works</div>
+            <h2>Portofolio & inspirasi.</h2>
+          </div>
+          <p>Contoh visual proyek untuk menggambarkan karakter pekerjaan kontraktor, landscape, dan interior.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88" alt="Rumah modern">
+            <div class="project-info"><span>Contractor</span><h3>Modern Residential</h3></div>
+          </article>
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1100&q=88" alt="Taman hijau">
+            <div class="project-info"><span>Landscape</span><h3>Green Garden</h3></div>
+          </article>
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=88" alt="Interior elegan">
+            <div class="project-info"><span>Interior</span><h3>Warm Living Space</h3></div>
+          </article>
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=88" alt="Interior dan taman rumah">
+            <div class="project-info"><span>Design & Build</span><h3>Indoor–Outdoor Living</h3></div>
+          </article>
+        </div>
+
+        <p style="font-size:11px;color:#89938c;margin-top:16px;">
+          * Foto portofolio di atas adalah foto ilustrasi nyata dari Unsplash. Ganti dengan dokumentasi proyek asli CV. Junio Decoration untuk menampilkan portofolio perusahaan.
+        </p>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=88" alt="Ruang interior dengan tanaman">
+        </div>
+        <div class="about-copy">
+          <div class="kicker">Tentang perusahaan</div>
+          <h2>Estetika bertemu fungsi.</h2>
+          <p>
+            <strong>CV. Junio Decoration</strong> adalah perusahaan yang bergerak di bidang
+            kontraktor, landscape, interior, dan perdagangan umum. Kami berkomitmen
+            menghadirkan pekerjaan yang tertata dan solusi yang relevan untuk kebutuhan
+            hunian maupun proyek.
+          </p>
+          <p>
+            Berbasis di Cugenang, Kabupaten Cianjur, kami siap menjadi partner dalam
+            merencanakan dan merealisasikan kebutuhan proyek Anda.
+          </p>
+          <div class="check-list">
+            <div class="check"><b>✓</b><span>Konsep sesuai kebutuhan</span></div>
+            <div class="check"><b>✓</b><span>Perhatian pada detail</span></div>
+            <div class="check"><b>✓</b><span>Fokus pada fungsi & estetika</span></div>
+            <div class="check"><b>✓</b><span>Komunikasi proyek yang jelas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="kontak">
+      <div class="container">
+        <div class="cta-box">
+          <div class="kicker" style="color:#b7d2be">Mari mulai proyek Anda</div>
+          <h2>Wujudkan ruang yang lebih nyaman, fungsional, dan berkarakter.</h2>
+          <p>Hubungi kami untuk konsultasi awal mengenai pembangunan, renovasi, taman, interior, atau kebutuhan pengadaan.</p>
+          <a class="btn btn-primary" href="https://wa.me/6281296913536?text=Halo%20CV.%20Junio%20Decoration%2C%20saya%20ingin%20konsultasi%20mengenai%20proyek." target="_blank" rel="noopener">💬 0812 9691 3536</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>CV. Junio Decoration</h3>
+          <p>Contractor • Landscape • Interior • General Trading</p>
+        </div>
+        <div>
+          <div class="footer-title">Alamat</div>
+          <p>Jamaras, RT./RW.002/005,<br>Sarampad, Kec. Cugenang,<br>Kabupaten Cianjur, Jawa Barat 43252</p>
+        </div>
+        <div>
+          <div class="footer-title">Kontak</div>
+          <p><a href="https://wa.me/6281296913536" target="_blank" rel="noopener">WhatsApp: 0812 9691 3536</a></p>
+          <p style="margin-top:6px"><a href="#home">Kembali ke atas ↑</a></p>
+        </div>
+      </div>
+      <div class="copyright">© 2026 CV. Junio Decoration. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const nav=document.querySelector('.nav-links');
+      const open=nav.style.display==='flex';
+      nav.style.display=open?'none':'flex';
+      if(!open){
+        nav.style.position='absolute';
+        nav.style.top='75px';
+        nav.style.left='4%';
+        nav.style.right='4%';
+        nav.style.padding='18px';
+        nav.style.flexDirection='column';
+        nav.style.alignItems='stretch';
+        nav.style.background='rgba(255,255,255,.96)';
+        nav.style.borderRadius='20px';
+        nav.style.boxShadow='0 20px 50px rgba(0,0,0,.12)';
+      }
